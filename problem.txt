@@ -1,0 +1,16 @@
+#############################################################################
+problem:
+    all session are filled 
+
+how i solved:
+    SHOW PROCESSLIST;
+    mysql> show variables like "max_connections";
+    Update max_connections temporarily:
+    set global max_connections = <new_value>;
+    Update max_connections permanently:
+    /etc/my.cnf or /etc/mysql/my.cnf : 
+    max_connections = <new_value>
+    SHOW VARIABLES LIKE 'wait_timeout';
+    mysql> show global variables like 'wait_timeout';
+
+#############################################################################
